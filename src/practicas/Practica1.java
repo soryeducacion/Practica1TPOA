@@ -7,7 +7,7 @@ public class Practica1 {
 		// TODO Auto-generated method stub
 		
 		int[] numeros = new int[15];
-		int num, contador_neg = 0;
+		int num, contador_neg = 0, contador_positivos = 0, result_promedio=0, suma_positivos = 0 ;
 		
 		Scanner captura = new Scanner(System.in);
 		
@@ -30,8 +30,16 @@ public class Practica1 {
 				contador_neg += 1;
 			}
 			
+			if(numeros[i] %2 != 0) {
+				suma_positivos += numeros[i];
+				contador_positivos += 1;
+			}
+			
 		}
+		result_promedio = suma_positivos / contador_positivos;
 
+		System.out.println("El resultado de negativos es: " +contador_neg);
+		System.out.println("El romedio: " + result_promedio );
 	}
 
 }
